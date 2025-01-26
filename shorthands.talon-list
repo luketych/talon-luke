@@ -1,0 +1,21 @@
+list: user.vocabulary
+-
+at gmail dot com: @gmail.com
+double dash: --
+email zero: luke.tycholiz@gmail.com
+email one: fusilli.jerry89@gmail.com
+email two: luke.tych@gmail.com
+gmail
+gmail dot com: gmail.com
+hackernews: https://news.ycombinator.com
+lsd
+reddit
+tsn
+tsn website: https://tsn.ca
+vel ha: velja
+
+# extensions
+dot js: .js
+dot pie: .py
+dot talon: .talon
+dot talon list: .talon-list
