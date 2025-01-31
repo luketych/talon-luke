@@ -19,3 +19,14 @@ dot js: .js
 dot pie: .py
 dot talon: .talon
 dot talon list: .talon-list
+
+uno: 1
+dose: 2
+trays: 3
+cuatro: 4
+cinco: 5
+sess: 6
+siete: 7
+ocho: 8
+novay: 9
+diez: 10
