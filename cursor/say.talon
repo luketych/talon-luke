@@ -1,4 +1,4 @@
-app: /Cursor/
+app: cursor
 -
 
 pray <user.text>:

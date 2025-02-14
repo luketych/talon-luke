@@ -1,11 +1,10 @@
 folk <user.running_applications>: 
     user.switcher_focus(running_applications)
 
-funk:
-    key("delete")
+funk: key("delete")
 
-junk:
-    key("backspace")
+junk: key("backspace")
 
-scape:
-    key("escape")
+reet: key(return)
+
+scape: key("escape")

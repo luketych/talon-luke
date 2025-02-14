@@ -28,6 +28,7 @@ class Actions:
         ## insert command
         command = "fd -g '{"
         command += ",".join(file_names)
+        command += ",_" # add one final trailing comma and a placeholder, to make using alt+left / alt+right easier
         command += "}' | xargs cursor"
 
         actions.insert(command)
@@ -35,7 +36,7 @@ class Actions:
         actions.sleep("100ms")
 
         # move cursor back 2 words
-        actions.key("alt-left alt-left")
+        actions.key("alt-left " * 2)
 
-        # move cursor back 5 spaces
-        actions.key("left left left left left")
+        # move cursor back 6 spaces
+        actions.key("left " * 6)

@@ -1,40 +1,29 @@
-app: /Term/
-app: Warp
+app: /iterm/
 -
 
-acid:
-    "lsd\n"
-    
-acid <number>:
-    insert("""lsd --recursive --depth {number or ''}""")
-    key("enter")
+tag(): user.generic_unix_shell
+tag(): user.git
+tag(): user.kubectl
+tag(): user.readline
+
+
 
 
 can | cancel:
-    key("ctrl-c")
+    key(ctrl-c)
+
+
+# cd
+see dee: "cd "
 
 
 clear:
-    key("ctrl-l")
+    key(ctrl-l)
     "lsd\n"
 
 clear all:
-    key("ctrl-l")
+    key(ctrl-l)
 
-
-change <user.text>:
-    "cd {text}"
-
-change <user.format_text>:
-    "cd {format_text}"
-
-change <user.text> slapper:
-    "cd {text}\n"
-    "lsd\n"
-
-change <user.format_text> slapper:
-    "cd {format_text}\n"
-    "lsd\n"
 
 
 exit:
@@ -84,10 +73,6 @@ history:
 open file <user.format_text>:
     "open {format_text}"
 
-
-
-search:
-    key("ctrl-r")
 
 
 talon home:

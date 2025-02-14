@@ -1,18 +1,24 @@
-app: /Cursor/
+app: cursor
 -
 
 
-cursor <user.format_text>:
+code <user.format_text>:
     user.cursorFiles(format_text)
 
-cursor <user.format_text> split <user.format_text>:
+code <user.format_text> and <user.format_text>:
     user.cursorFiles(format_text_1, format_text_2)
 
-cursor <user.format_text> split <user.format_text> split <user.format_text>:
+code <user.format_text> and <user.format_text> and <user.format_text>:
     user.cursorFiles(format_text_1, format_text_2, format_text_3)
     
-cursor <user.format_text> split <user.format_text> split <user.format_text> split <user.format_text>:
+code <user.format_text> and <user.format_text> and <user.format_text> and <user.format_text>:
     user.cursorFiles(format_text_1, format_text_2, format_text_3, format_text_4)
+
+
+
+
+go preev:
+    key("ctrl-tab")
 
 
 hello chat:
@@ -21,25 +27,25 @@ hello chat:
 hello composer:
     key("cmd-i")
 
+inter:
+    key("ctrl-c")
+interrupt:
+    key("ctrl-c")
 
-open file:
+
+open:
     key("cmd-p")
 
-open file <user.text>:
+open <user.text>:
     user.openFile(text)
 
-open file <user.format_text>:
+open <user.format_text>:
     user.openFile(format_text)
 
 
-open two files <user.format_text>:
-    user.openFiles(format_text)
 
-
-open last file:
-    key("ctrl-tab")
+pray <user.text>:
+    user.pray(text)
 
 spray <user.text>:
     user.spray(text)
-
-    

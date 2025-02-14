@@ -4,3 +4,5 @@ blash: \
 com: ,
 comma: ,
 dash: -
+slash: /
+star: *

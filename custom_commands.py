@@ -1,24 +1,58 @@
-# from talon import ctrl, Module, actions
-
-# mod = Module()
-
-# mod.tag("key_debug", "Keep track of which keys are held and not")
-
-# ctx = Context()
-# ctx.matches = r"""
-# tag: user.key_debug
-# """
-
-
-from talon import Module, actions
+from talon import actions, ctrl, Context, Module
 
 mod = Module()
+
+mod.tag("key_debug", "description")
+
+ctx = Context()
+ctx.matches = r"""
+tag: user.key_debug
+"""
+
+
 
 
 @mod.action_class
 class Actions:
-    def find_reverse(): 
-        "Begins a reverse search."
+    def go_slash(num_slashes: int = 1):
+        """
+        Moves cursor to the nth slash on the current line.
+        
+        Args:
+            num_slashes: The nth slash to move to (default: 1)
+            
+        Returns:
+            0 on success
+        """
+
+        # print("num_slashes: ", num_slashes)
+        
+        # # # start at the beginning of the line
+        # actions.key("ctrl-a")
+
+        num_slashes_found = 0
+
+        # #while num_slashes_found < num_slashes:
+        # actions.key("right")
+
+        #res = actions.user.dictation_peek(True, False)
+        #print("res: ", res)
+
+        # clip = ImageGrab.grabclipboard()
+
+        # if clip:
+        #     print("*****")
+        #     print(clip)
+        #     print("*****")
+
+        print("go_slash()")
+
+        return 0
+    
+
+
+    
+
 
     def mangle(s: str) -> str:
         "Mangles the input string in the appropriate manner."

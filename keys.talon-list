@@ -1,20 +1,31 @@
 list: user.modifier_key
 os: mac
 -
-
 alt: alt
 alter: alt
-cash: cmd-alt-shift
+option: alt
+
 chum: cmd
 command: cmd
+
 control: ctrl
-cot: alt-ctrl
 roll: ctrl
-shop: alt-cmd
-scram: cmd-shift
-shell: shift-alt-cmd
-shift: shift
-sholl: ctrl-shift
-salt: alt-shift
+
 sky: shift
 super: super
+
+function: fn
+globe: fn
+
+shift: shift
+
+cat: alt-ctrl
+
+malt: cmd-alt
+mush: cmd-shift
+mash: cmd-alt-shift
+
+cash: ctrl-shift
+rash: ctrl-shift
+
+ash: alt-shift

@@ -1,5 +1,5 @@
 find reverse:
-    user.find_reverse()
+     user.find_reverse()
 
 mangle <user.text>:
     mangled_text = user.mangle(text)
@@ -15,11 +15,5 @@ mover <user.format_text> move <user.format_text>:
     insert(ret_val)
 
 
-pre pad <user.format_text>:
-    " {format_text}"
-
-pre padded <user.format_text>:
-    " {format_text}."
-
-post pad <user.format_text>:
-    "{format_text} "
+go slashy:
+    user.go_slash(1)

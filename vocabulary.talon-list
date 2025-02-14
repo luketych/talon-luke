@@ -1,7 +1,16 @@
 list: user.vocabulary
 -
+
+anki
+
+csv: csv
+flack: flac
+empee three: mp3
+empee four: mp4
+
+
 at gmail dot com: @gmail.com
-double dash: --
+dub dash: --
 email zero: luke.tycholiz@gmail.com
 email one: fusilli.jerry89@gmail.com
 email two: luke.tych@gmail.com
@@ -30,3 +39,10 @@ siete: 7
 ocho: 8
 novay: 9
 diez: 10
+
+
+substrings
+
+cd: "cd "
+you till: util
+
