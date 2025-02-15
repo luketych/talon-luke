@@ -2,6 +2,10 @@ cheer: key("cmd-n")
 
 chur: key("cmd-r")
 
-chap | shap: key("cmd-t")
+map: key("cmd-t")
 
-chale | shale: key("cmd-w")
+shale: key("cmd-w")
+
+shap | chap: key("cmd-shift-t")
+
+chub: key("cmd-tab")

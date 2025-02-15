@@ -12,6 +12,10 @@ tag: user.key_debug
 """
 
 
+SHORT_PAUSE = "20ms"
+MEDIUM_PAUSE = "100ms"
+LONG_PAUSE = "500ms"
+
 
 
 @mod.action_class
@@ -21,45 +25,59 @@ class Actions:
         
 
         # Check if tmux is already running
-        actions.insert("echo $TMUX | grep -q . && echo 'Warning: tmux is already running' | tee ~/.talon/tmp/tmux.log\n")
-        actions.sleep("1000ms")
+        # actions.insert("echo $TMUX | grep -q . && echo 'Warning: tmux is already running' | tee ~/.talon/tmp/tmux.log\n")
+        actions.user.paste("echo $TMUX | grep -q . && echo 'Warning: tmux is already running' | tee ~/.talon/tmp/tmux.log\n")
+        actions.sleep("250ms")
 
 
         actions.insert("tmux\n")
 
         # wait for tmux to start
-        actions.sleep("100ms")
+        actions.sleep(MEDIUM_PAUSE)
 
         actions.key("ctrl-b")
-        actions.sleep("50ms")
-        actions.key("%")
-        actions.sleep("50ms")
+        actions.sleep(SHORT_PAUSE)
+        #actions.key("%")
+
+        actions.insert(":")
+
+        actions.user.paste("split-window -v")
         actions.key("enter")
-        actions.sleep("50ms")
+        
+        actions.sleep(LONG_PAUSE)
 
 
         actions.key("ctrl-b")
-        actions.insert(": resize-pane -R 25 ")
-        actions.sleep("50ms")
+
+        actions.sleep(LONG_PAUSE)
+        actions.insert(":")
+        actions.user.paste("resize-pane -D 12")
+        actions.sleep(LONG_PAUSE)
         actions.key("enter")
-        actions.sleep("50ms")
+        actions.sleep(LONG_PAUSE)
 
         # mkdir ~/.talon/tmp
         # luketych@Lukes-MacBook-Air mst % touch ~/.talon/tmp/tmux.log
 
-
-        actions.insert("touch ~/.talon/tmp.log\n")
-        actions.sleep("50ms")
-
-        # tail -f /tmp/log
-        actions.insert("tail -f ~/.talon/tmp.log\n")
-        actions.sleep("50ms")
+        actions.key("ctrl-b up")
 
 
-        # switch to the left pane
+        # actions.insert("touch ~/.talon/tmp.log\n")
+        actions.user.paste("touch ~/.talon/tmp.log")
+        actions.key("enter")
+        actions.sleep(MEDIUM_PAUSE)
+
+        # tail -f /tmp/logp
+        # actions.insert("tail -f ~/.talon/tmp.log\n")
+        actions.user.paste("tail -f ~/.talon/tmp.log")
+        actions.key("enter")
+        actions.sleep(MEDIUM_PAUSE)
+
+
+        # switch to the bottom pane
         actions.key("ctrl-b")
-        actions.key("left")
-        actions.sleep("50ms")
+        actions.key("down")
+        actions.sleep(LONG_PAUSE)
 
 
         return 0
@@ -72,17 +90,17 @@ class Actions:
 
         #  rm /tmp/.myscript.sh.swp
        # actions.insert("rm /tmp/.myscript.sh.swp\n")
-        actions.sleep("50ms")
+        actions.sleep(SHORT_PAUSE)
         actions.key("enter")
-        actions.sleep("50ms")
+        actions.sleep(SHORT_PAUSE)
 
 
         #actions.insert("nvim ~/.talon/vim_scripts/ls.sh && chmod +x ~/.talon/vim_scripts/ls.sh && ~/.talon/vim_scripts/ls.sh | tee ~/.talon/tmp.log")
 
-        actions.insert(load_ls_script)  
+        actions.user.paste(load_ls_script)  
 
 
-        actions.sleep("50ms")
+        actions.sleep(SHORT_PAUSE)
         actions.key("enter")
 
         return 0
@@ -96,8 +114,9 @@ class Actions:
         # xargs -0 eza --icons --long --grid --color=always |
 	    # tee /tmp/log
 
-        actions.insert("fd -d 2 -t f --no-hidden -0 | xargs -0 eza --icons --long --grid --color=always | tee ~/.talon/tmp.log")
-        actions.sleep("50ms")
+        # actions.insert("fd -d 2 -t f --no-hidden -0 | xargs -0 eza --icons --long --grid --color=always | tee ~/.talon/tmp.log")
+        actions.user.paste("fd -d 2 -t f --no-hidden -0 | xargs -0 eza --icons --long --grid --color=always | tee ~/.talon/tmp.log")
+        actions.sleep(SHORT_PAUSE)
         actions.key("enter")
 
         return 0

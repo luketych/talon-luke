@@ -2,6 +2,7 @@ list: user.vocabulary
 -
 
 anki
+neovim
 
 csv: csv
 flack: flac

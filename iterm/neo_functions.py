@@ -12,18 +12,20 @@ tag: user.key_debug
 
 @mod.action_class
 class Actions:
-    def special__ls():
+    def neo__ls():
         """ Open nvim with a predefined function. """
         
 
         #  rm /tmp/.myscript.sh.swp
        # actions.insert("rm /tmp/.myscript.sh.swp\n")
-        actions.sleep("50ms")
+        actions.sleep("10ms")
         actions.key("enter")
-        actions.sleep("50ms")
+        actions.sleep("10ms")
 
 
-        actions.auto_insert(load_ls_call_script)  
+        # actions.auto_insert(load_ls_call_script)  
+
+        actions.user.paste(load_ls_call_script)
 
 
         actions.sleep("50ms")
